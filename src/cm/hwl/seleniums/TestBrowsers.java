@@ -106,7 +106,7 @@ public class TestBrowsers implements IFrameLocators, JDweb {
 	driver.findElement(By.xpath(usernameLocator)).click();
 	switchToSome = new SwitchToSome(driver);
 	switchToSome.swtichToNewWindows("我的京东");
-	// 下拉到个人信息
+	// 下拉到个人信息位置
 	((JavascriptExecutor) driver)
 		.executeScript("window.scrollBy(0,900)", 0);
 	wait.waitFor(5000);
@@ -120,5 +120,6 @@ public class TestBrowsers implements IFrameLocators, JDweb {
 	    System.out.println(e.getText());
 	}
     }
+    // update 20161014 10:29 By hwl
 
 }
